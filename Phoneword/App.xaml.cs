@@ -2,6 +2,8 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.Collections.Generic;
 
+//testing the commit and push function
+
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Phoneword
 {
