@@ -11,6 +11,10 @@
         </OnPlatform>
     </ContentPage.Padding>
     <StackLayout>
+<!-- 
+This below line states that the source of the phone history list
+        is from PhoneNumbers
+-->
       <ListView ItemsSource="{x:Static local:App.PhoneNumbers}" />
     </StackLayout>
 </ContentPage>    

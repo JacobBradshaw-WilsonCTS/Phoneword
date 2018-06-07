@@ -1,14 +1,18 @@
 ﻿using System.Text;
 
+//This code translates the users input from letters to numbers.
 namespace Core
 {
+    //This line creates the class
     public static class PhonewordTranslator
     {
+        //This line executes ToNumber
         public static string ToNumber(string raw)
         {
+            //If nothing is inputted return NULL
             if (string.IsNullOrWhiteSpace(raw))
                 return null;
-
+            //This capitalises each letter
             raw = raw.ToUpperInvariant();
 
             var newNumber = new StringBuilder();
@@ -33,17 +37,20 @@ namespace Core
         {
             return keyString.IndexOf(c) >= 0;
         }
-
+        //The letters inputted get put into this list and then translated
+        //by the number being which section number they are in +2
         static readonly string[] digits = {
             "ABC", "DEF", "GHI", "JKL", "MNO", "PQRS", "TUV", "WXYZ"
         };
 
         static int? TranslateToNumber(char c)
         {
+            //This line adds 1 to the number as it counts from 0
             for (int i = 0; i < digits.Length; i++)
             {
                 if (digits[i].Contains(c))
                     return 2 + i;
+                // i + 2, letters on Nokia 3310 start at 2
             }
             return null;
         }

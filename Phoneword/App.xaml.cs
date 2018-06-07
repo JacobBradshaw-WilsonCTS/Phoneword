@@ -1,3 +1,5 @@
+//This is the main screen this is what is booted up at the start.
+
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.Collections.Generic;
@@ -11,8 +13,11 @@ namespace Phoneword
 
         public App()
         {
+            //Initialising the app
             InitializeComponent();
+            //Creates a list of the phone numbers 
             PhoneNumbers = new List<string>();
+            //Sets the main page to MainPage.xaml
             MainPage = new NavigationPage(new MainPage());
 
         }
